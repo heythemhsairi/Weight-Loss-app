@@ -175,3 +175,8 @@ export async function saveCheckin(fd: FormData) {
   revalidatePath('/checkin');
   revalidatePath('/');
 }
+export async function deleteCheckin(fd: FormData) {
+  await q.deleteCheckin(Number(fd.get('id')));
+  revalidatePath('/checkin');
+  revalidatePath('/');
+}

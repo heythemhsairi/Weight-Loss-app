@@ -215,3 +215,7 @@ export async function upsertCheckin(c: {
     stress: c.stress, note: c.note,
   }, { onConflict: 'date' });
 }
+
+export async function deleteCheckin(id: number) {
+  await supabase().from('checkins').delete().eq('id', id);
+}
