@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+
+# next.js
+.next
+out
+build
+
+# env — NEVER commit real secrets
+.env
+.env.local
+.env*.local
+
+# local data store (legacy JSON/SQLite fallback)
+data/*.db
+data/*.db-*
+data/store.json
+
+# misc
+*.log
+dev.log
+.DS_Store
+*.tsbuildinfo
